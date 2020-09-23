@@ -6,20 +6,19 @@ import javax.inject.Singleton
 
 //Модуль предоставляющий какие либо данные или удовлетворение зависимсоти при сборке
 @Module
-class CoffeeModule {
+class CoffeeTwo {
 
-    //Провайдим наш класс CoffeeService с какой либо информацией
+    //Провайдим наш класс CoffeeTwoService с какой либо информацией
     @Provides
     //Singleton указывается для того чтобы экземпляр создавался всего один раз при старте
     //приложения, далее информация кэшируется и при новом забросе этой же информации берется
     //из кэша
     @Singleton
-    fun coffeeService() = CoffeeService()
+    fun coffeeTwoService() = CoffeeTwoService()
 }
 
 //Собственно наш класс предоставлющий информацию или удовлетворяет зависимость.
-class CoffeeService {
-    fun prepareCoffee() = "Here! Espresso for you"
-    fun fetchCoffee() = "espresso"
+class CoffeeTwoService{
+    fun prepareCoffeeTwo() = "Here! LaRaf for you"
+    fun fetchCoffeeTwo() = "LaRaf"
 }
-
